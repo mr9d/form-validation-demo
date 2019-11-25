@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form validation demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="page">
+        <header class="page__header">Form validation demo</header>
+        <main class="page__main">
+            <form action="#" class="form">
+                <div class="form__section">
+                    <!-- Обязательное поле -->
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form__section">
+                    <!-- Ограничение по паттерну -->
+                    <label for="mname">Отчество:</label>
+                    <input type="text" id="mname" name="mname" pattern="[А-Я][а-я]+">
+                </div>
+                <div class="form__section">
+                    <!-- Ограничение по длине -->
+                    <label for="sname">Фамилия:</label>
+                    <input type="text" id="sname" name="sname" minlength="3" maxlength="15">
+                </div>
+                <div class="form__section">
+                    <!-- Дата -->
+                    <label for="bdate">Дата рождения:</label>
+                    <input type="date" id="bdate" name="bdate">
+                </div>
+                <div class="form__section">
+                    <!-- Электронная почта -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form__section">
+                    <!-- Числовые поля -->
+                    <label for="teeth">Количество зубов:</label>
+                    <input type="number" id="teeth" name="teeth" min="0">
+                </div>
+                <div class="form__section">
+                    <!-- Телефон -->
+                    <label for="telephone">Телефон:</label>
+                    <input type="tel" id="telephone" name="telephone"\>
+                </div>
+                <div class="form__section">
+                    <!-- URL -->
+                    <label for="homepage">Домашняя страница:</label>
+                    <input type="url" id="homepage" name="homepage"\>
+                </div>
+                <div class="form__section">
+                    <!-- Валидация через JS -->
+                    <label for="pass">Пароль:</label>
+                    <input type="password" id="pass" name="pass"\>
+                </div>
+                <div class="form__section">
+                    <button type="submit" class="submit">Отправить</button>
+                    <button type="reset" class="reset">Очистить</button>
+                </div>
+            </form>
+            <section class="student-list"></section>
+        </main>
+        <footer class="page__footer">&copy;2K19, Aleksandr Kozlov</footer>
+    </div>
+</body>
+
+</html>
